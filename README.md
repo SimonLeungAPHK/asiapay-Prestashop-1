@@ -21,7 +21,7 @@ This plugin supports Prestashop version 1.7 and higher.
  4. On the confirmation page, review your changes then click the “Confirm button”.
 
  ## Documentation
-[Prestashop documentation](https://github.com/juliusphilipponce/magento/blob/master/Magento2.0%20Payment%20Module%20Setup%20Guide.pdf)
+[Prestashop documentation](https://github.com/asiapay-lib/asiapay-Prestashop/blob/master/Integration%20Guide%20for%20PestaShop%201.7.docx?raw=true)
 
 ## Support
 If you have a feature request, or spotted a bug or a technical problem, create a GitHub issue. For other questions, contact our [Customer Service](https://www.paydollar.com/en/contactus.html).
