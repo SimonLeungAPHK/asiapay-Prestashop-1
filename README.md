@@ -1,11 +1,11 @@
-# PayDollar/SaimPay/PesoPay Payment plugin for Prestashop
-Use PayDollar/SaimPay/PesoPays plugin for Prestashop to offer ALL payments option.
+# PayDollar/PesoPay/SiamPay Payment plugin for Prestashop
+Use PayDollar/PesoPay/SiamPay plugin for Prestashop to offer ALL payments option.
 
 ## Download
 Please download the latest plugin version. [Download](https://github.com/asiapay-lib/asiapay-Prestashop/releases/latest)
 
 ## Integration
-The plugin integrates Prestashop with PayDollar/SaimPay/PesoPay payment gateway with All payment method.
+The plugin integrates Prestashop with PayDollar/PesoPay/SiamPay payment gateway with All payment method.
 
 ## Requirements
 This plugin supports Prestashop version 1.7 and higher.
