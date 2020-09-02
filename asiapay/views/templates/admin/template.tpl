@@ -45,6 +45,8 @@
 		Master: 5422882800700007 <br/>
 		Holder Name: John Doe <br/>
 		Expiry: July 2020
-		CVV: 123
+		CVV: 123 <br/>
+		<strong>3DS 2.0 Testing Cards</strong><br/>
+		<u>https://test.paydollar.com/b2cuat/eng/merchant/support/threeDSTestingCardInfo.html</u>
 	</p>
 </div>

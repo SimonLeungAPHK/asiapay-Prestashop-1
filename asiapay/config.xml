@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-        <module>
-            <name>asiapay</name>
-            <displayName><![CDATA[AsiaPay&#039;s (PayDollar/PesoPay/SiamPay) Payment Service]]></displayName>
-            <version><![CDATA[0.8]]></version>
-            <description><![CDATA[Accept payments with AsiaPay&#039;s (PayDollar/PesoPay/SiamPay) Payment Service]]></description>
-            <author><![CDATA[]]></author>
-            <tab><![CDATA[payments_gateways]]></tab>
-            <is_configurable>1</is_configurable>
-            <need_instance>1</need_instance>
+<module>
+    <name>asiapay</name>
+    <displayName><![CDATA[AsiaPay&#039;s (PayDollar/PesoPay/SiamPay) Payment Service]]></displayName>
+    <version><![CDATA[0.8.1]]></version>
+    <description><![CDATA[Accept payments with AsiaPay&#039;s (PayDollar/PesoPay/SiamPay) Payment Service]]></description>
+    <author><![CDATA[Asiapay]]></author>
+    <tab><![CDATA[payments_gateways]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
 	<limited_countries></limited_countries>
-        </module>
+</module>
