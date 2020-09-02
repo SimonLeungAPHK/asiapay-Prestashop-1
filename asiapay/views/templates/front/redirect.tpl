@@ -43,7 +43,49 @@
     <input type="hidden" name="cancelUrl" value="{$cancelUrl}" />
     
     <input type="hidden" name="secureHash" value="{$secureHash}" />
-    <input type="hidden" name="failRetry" value="{$failRetry}" />            
+    <input type="hidden" name="failRetry" value="{$failRetry}" />  
+
+    <input type="hidden" name="threeDSTransType" value="{$threeDSTransType}" />
+    <input type="hidden" name="threeDSChallengePreference" value="{$threeDSChallengePreference}" />
+    <input type="hidden" name="threeDSCustomerEmail" value="{$threeDSCustomerEmail}" />
+    <input type="hidden" name="threeDSDeliveryEmail" value="{$threeDSDeliveryEmail}" />
+    <input type="hidden" name="threeDSMobilePhoneCountryCode" value="{$threeDSMobilePhoneCountryCode}" />
+    <input type="hidden" name="threeDSMobilePhoneNumber" value="{$threeDSMobilePhoneNumber}" />
+    <input type="hidden" name="threeDSHomePhoneCountryCode" value="{$threeDSHomePhoneCountryCode}" />
+    <input type="hidden" name="threeDSHomePhoneNumber" value="{$threeDSHomePhoneNumber}" />
+    <input type="hidden" name="threeDSWorkPhoneCountryCode" value="{$threeDSWorkPhoneCountryCode}" />
+    <input type="hidden" name="threeDSWorkPhoneNumber" value="{$threeDSWorkPhoneNumber}" />
+
+    <input type="hidden" name="threeDSAcctCreateDate" value="{$threeDSAcctCreateDate}" />
+    <input type="hidden" name="threeDSAcctAgeInd" value="{$threeDSAcctAgeInd}" />
+    <input type="hidden" name="threeDSAcctPurchaseCount" value="{$threeDSAcctPurchaseCount}" />
+    <input type="hidden" name="threeDSAcctNumTransDay" value="{$threeDSAcctNumTransDay}" />
+    <input type="hidden" name="threeDSAcctNumTransYear" value="{$threeDSAcctNumTransYear}" />
+    <input type="hidden" name="threeDSAcctIsShippingAcctNameSame" value="{$threeDSAcctIsShippingAcctNameSame}" />
+    <input type="hidden" name="threeDSAcctLastChangeDate" value="{$threeDSAcctLastChangeDate}" />
+    <input type="hidden" name="threeDSAcctLastChangeInd" value="{$threeDSAcctLastChangeInd}" />
+    <input type="hidden" name="threeDSAcctShippingAddrLastChangeInd" value="{$threeDSAcctShippingAddrLastChangeInd}" />
+    <input type="hidden" name="threeDSAcctShippingAddrLastChangeDate" value="{$threeDSAcctShippingAddrLastChangeDate}" />
+
+    <input type="hidden" name="threeDSBillingCountryCode" value="{$threeDSBillingCountryCode}" />
+    <input type="hidden" name="threeDSBillingState" value="{$threeDSBillingState}" />
+    <input type="hidden" name="threeDSBillingCity" value="{$threeDSBillingCity}" />
+    <input type="hidden" name="threeDSBillingLine1" value="{$threeDSBillingLine1}" />
+    <input type="hidden" name="threeDSBillingLine2" value="{$threeDSBillingLine2}" />
+    <input type="hidden" name="threeDSBillingPostalCode" value="{$threeDSBillingPostalCode}" />
+
+    <input type="hidden" name="threeDSShippingCountryCode" value="{$threeDSShippingCountryCode}" />
+    <input type="hidden" name="threeDSShippingState" value="{$threeDSShippingState}" />
+    <input type="hidden" name="threeDSShippingCity" value="{$threeDSShippingCity}" />
+    <input type="hidden" name="threeDSShippingLine1" value="{$threeDSShippingLine1}" />
+    <input type="hidden" name="threeDSShippingLine2" value="{$threeDSShippingLine2}" />
+    <input type="hidden" name="threeDSIsAddrMatch" value="{$threeDSIsAddrMatch}" />
+    <input type="hidden" name="threeDSShippingDetails" value="{$threeDSShippingDetails}" />
+    <input type="hidden" name="threeDSShippingPostalCode" value="{$threeDSShippingPostalCode}" />
+
+    <input type="hidden" name="threeDSAcctAuthMethod" value="{$threeDSAcctAuthMethod}" />          
+    <input type="hidden" name="threeDSAcctAuthTimestamp" value="{$threeDSAcctAuthTimestamp}" />
+
 </form>
 
 <script type="text/javascript">

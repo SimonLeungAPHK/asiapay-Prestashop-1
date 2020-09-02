@@ -18,7 +18,7 @@ class asiapay extends PaymentModule
 		$this->author = 'Asiapay';
 		$this->version = '0.8.1';
 
-		$config = Configuration::getMultiple(array('PAYMENT_URL', 'MERCHANT_ID', 'CURRENCY', 'PAY_TYPE', 'PAY_METHOD', 'SECURE_HASH_SECRET'));
+		$config = Configuration::getMultiple(array('PAYMENT_URL', 'MERCHANT_ID', 'CURRENCY', 'PAY_TYPE', 'PAY_METHOD', 'SECURE_HASH_SECRET', 'TRANSACTION_TYPE', 'CHALLENGE_PREFERENCE'));
 
 		if (isset($config['PAYMENT_URL']))
 			$this->PAYMENT_URL = $config['PAYMENT_URL'];
@@ -36,6 +36,11 @@ class asiapay extends PaymentModule
 		}else{
 			$this->SECURE_HASH_SECRET = $config['SECURE_HASH_SECRET'];
 		}
+
+		if (isset($config['TRANSACTION_TYPE']))
+			$this->PAY_METHOD = $config['TRANSACTION_TYPE'];
+		if (isset($config['CHALLENGE_PREFERENCE']))
+			$this->PAY_METHOD = $config['CHALLENGE_PREFERENCE'];
 			
 		parent::__construct();
 		$this->page = basename(__FILE__, '.php');
@@ -67,6 +72,8 @@ class asiapay extends PaymentModule
 		!Configuration::deleteByName('PAY_TYPE')||
 		!Configuration::deleteByName('PAY_METHOD')||
 		!Configuration::deleteByName('SECURE_HASH_SECRET')||
+		!Configuration::deleteByName('TRANSACTION_TYPE')||
+		!Configuration::deleteByName('CHALLENGE_PREFERENCE')||
 		!parent::uninstall())
 			return false;
 		return true;
@@ -230,6 +237,10 @@ class asiapay extends PaymentModule
 				$this->_postErrors[] = $this->l('Pay Type is required.');
 			if (!Tools::getValue('PAY_METHOD'))
 				$this->_postErrors[] = $this->l('Pay Method is required.');
+			if (!Tools::getValue('TRANSACTION_TYPE'))
+				$this->_postErrors[] = $this->l('Transaction Type is required.');
+			if (!Tools::getValue('CHALLENGE_PREFERENCE'))
+				$this->_postErrors[] = $this->l('Challenge Preference is required.');
 		}
 	}
 
@@ -242,7 +253,9 @@ class asiapay extends PaymentModule
 			Configuration::updateValue('CURRENCY', Tools::getValue('CURRENCY'));
 			Configuration::updateValue('PAY_TYPE', Tools::getValue('PAY_TYPE'));
 			Configuration::updateValue('PAY_METHOD', Tools::getValue('PAY_METHOD'));
-			
+			Configuration::updateValue('TRANSACTION_TYPE', Tools::getValue('TRANSACTION_TYPE'));
+			Configuration::updateValue('CHALLENGE_PREFERENCE', Tools::getValue('CHALLENGE_PREFERENCE'));
+
 			if(Tools::getValue('SECURE_HASH_SECRET')){
 				$secureHashSecret = Tools::getValue('SECURE_HASH_SECRET');
 			}else{
@@ -296,6 +309,18 @@ class asiapay extends PaymentModule
                         'label' => $this->l('Secure Hash Secret'),
                         'name' => 'SECURE_HASH_SECRET',
                         'required' => false
+                    ),
+                    array(
+                        'type' => 'text',
+                        'label' => $this->l('Transaction Type'),
+                        'name' => 'TRANSACTION_TYPE',
+                        'required' => true
+                    ),
+                    array(
+                        'type' => 'text',
+                        'label' => $this->l('Challenge Preference'),
+                        'name' => 'CHALLENGE_PREFERENCE',
+                        'required' => true
                     )
                 ),
                 'submit' => array(
@@ -335,7 +360,9 @@ class asiapay extends PaymentModule
             'CURRENCY' => Tools::getValue('CURRENCY', Configuration::get('CURRENCY')),
             'PAY_TYPE' => Tools::getValue('PAY_TYPE', Configuration::get('PAY_TYPE')),
             'PAY_METHOD' => Tools::getValue('PAY_METHOD', Configuration::get('PAY_METHOD')),
-            'SECURE_HASH_SECRET' => Tools::getValue('SECURE_HASH_SECRET', Configuration::get('SECURE_HASH_SECRET'))
+            'SECURE_HASH_SECRET' => Tools::getValue('SECURE_HASH_SECRET', Configuration::get('SECURE_HASH_SECRET')),
+            'TRANSACTION_TYPE' => Tools::getValue('TRANSACTION_TYPE', Configuration::get('TRANSACTION_TYPE')),
+            'CHALLENGE_PREFERENCE' => Tools::getValue('CHALLENGE_PREFERENCE', Configuration::get('CHALLENGE_PREFERENCE')),
         );
     }
 }
